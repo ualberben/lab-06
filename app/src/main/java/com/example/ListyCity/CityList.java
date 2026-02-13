@@ -33,4 +33,20 @@ public class CityList {
         Collections.sort(list);
         return list;
     }
+
+    /**
+     * This return true if list contain given city
+     * @param city
+     *      city to check if contains in the list
+     * @return
+     *      true if in the list, false if not in the list
+     */
+    public boolean hasCity(City city){
+        for (City c:cities){
+            if(c.compareTo(city) == 0){
+                return true;
+            }
+        }
+        return false;
+    }
 }
